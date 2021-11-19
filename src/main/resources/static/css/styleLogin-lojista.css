@@ -1,0 +1,98 @@
+/* Importando fonte: Roboto do google fonts */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+/* Configurações para todo o corpo da página */
+body {
+	display: flex;
+	background: url("../img/fundo-login-loja.jpg") fixed bottom;
+	background-size: cover;
+	height: calc(500px - 20px);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "roboto";
+	margin: 0px;
+	padding: 0px;
+}
+/* Configuração da primeira div de registro */
+.entrar-adm {
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 20px;
+	height: 500px;
+	margin-top: 5%;
+}
+
+/* Definições div e da logomarca da localiza*/
+.logo-marca {
+	display: block;
+	text-align: center;
+}
+
+.logo-localiza {
+	max-width: 100px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*Configurações do h1, título de esqueceu a senha? */
+h1 {
+	font-family: "roboto";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	margin-top: -50%;
+}
+
+/* Inicio das configurações do formulário de registro */
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+}
+
+/* Configurações das layers input do form */
+input {
+	background: rgba(43, 38, 38, 0.3);
+	padding: 12px 15px;
+	margin: 10px 0;
+	width: 100%;
+	color: white;
+}
+
+::placeholder {
+	color: white;
+}
+
+/* Configurações do botão de confirmação */
+.btn_confirmar {
+	border-radius: 20px;
+	color: white;
+	background-color: rgb(34, 139, 34);
+	padding: 10px 50px;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-style: italic;
+}
+
+.btn_confirmar:hover {
+	color: #228b22;
+	background-color: white;
+}

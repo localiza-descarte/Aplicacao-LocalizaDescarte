@@ -1,0 +1,163 @@
+/* Importando fonte: Roboto do google fonts */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+/* Configurações para todo o corpo da página */
+body {
+	display: flex;
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "roboto";
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Menu principal do site */
+.logotipo {
+	width: 75px;
+	height: 60;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.texto-pag {
+	margin-left: 10px;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #228B22;
+	font-size: 30px;
+	position: absolute;
+	top: 1%
+}
+
+.inicial {
+	position: static;
+	background-color: white;
+	z-index: 3;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.cadastro {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+}
+
+.cadastro:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+.fa-cog {
+	display: inline;
+	margin-left: 15px;
+}
+
+.fa-arrow-circle-left {
+	display: inline;
+	margin-left: 15px;
+}
+
+#cadastro_2 {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+#cadastro_2:hover {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.fa-bars {
+	color: #228B22;
+}
+/* Fim das configurações do menu principal */
+
+/* Configuração da primeira div de registro */
+.agendamentos-realizados {
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 20px;
+	height: 500px;
+	margin-top: 2%;
+}
+
+/* Inicio das configurações do formulário de registro */
+.titulo-bloco {
+	font-weight: bold;
+	font-style: italic;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+
+.texto-bloco {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+}
+
+.texto-bloco {
+	padding: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.texto-bloco p {
+	margin: 0px;
+	font-size: 30px;
+	font-style: italic;
+	color: white;
+	display: flex;
+}
+
+/* Inicio da configuração tabela da loja e usuário */
+.lojas_plataforma {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	text-align: center;
+	padding: 15px;
+	color: #ddd;
+	border-bottom: 1px solid #81818140;
+}
+
+.fa-times-circle {
+	margin-left: 50%;
+}
+/* Fim da configuração da tabela da loja e usuário */
+
+/* Configurações do botão de confirmação */
+.btn-mais {
+	float: right;
+	display: flex;
+	background-color: white;
+	border-radius: 10px;
+	color: #228B22;
+	padding: 8px 10px;
+	font-size: 15px;
+}
+
+.btn-mais:hover {
+	background-color: #228B22;
+	color: white;
+}

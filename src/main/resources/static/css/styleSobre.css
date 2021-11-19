@@ -1,0 +1,342 @@
+/* Configurações globais da página */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Roboto";
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+h3 {
+	font-size: 40px;
+	font-style: oblique;
+	font-weight: 700;
+	margin: center;
+}
+
+p {
+	color: black;
+	font-size: 16px;
+	font-style: oblique;
+}
+/* Fim das configurações globais */
+
+/* Configurações gerais repetidas 
+ - Tipo de aliamento de texto */
+header .text, .fixed-image .text, footer {
+	text-align: center;
+}
+
+/* Interfere diretamente na visualização do botão de seta, no texto do header e no texto do produto  */
+header, header .text, .fixed-image .text {
+	position: relative;
+}
+/* Fim das configurações gerais das sessões */
+
+/* Inicio sessão inicial do site */
+header {
+	height: calc(470px - 25px);
+	width: 100%;
+	left: 0;
+	background-color: #228B22;
+	display: flex;
+}
+
+/* Menu principal do site */
+#logo {
+	width: 75px;
+	height: 50;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.inicial {
+	position: fixed;
+	margin-top: -35px;
+	background-color: white;
+	z-index: 1;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.login {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+}
+
+.login:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+#login_2 {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+#login_2:hover {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.material-icons {
+	color: rgb(34, 139, 34);
+}
+/* Fim das configurações do menu principal */
+
+/* Definições da sessão incial header */
+header .text {
+	top: 25%;
+	color: white;
+}
+
+header .text h1 {
+	font-size: 100px;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 10px;
+	margin-bottom: 0;
+	color: white;
+}
+
+header .text p {
+	color: white;
+	font-size: 20px;
+	font-style: oblique;
+}
+
+header svg {
+	bottom: 0;
+	z-index: 5;
+	height: max-content;
+}
+/* Fim da sessão inicial do site */
+
+/* Inicio da sessão equipe - grupo 10
+Configuração do tamanho da div da sessão / definição da imagem de fundo / configurações gerais a div */
+.sessao_equipe {
+	text-align: center;
+	padding: 80px;
+	justify-content: center;
+	align-items: center;
+	background: url("../img/pagSobre/fundo-coding.jpg") fixed bottom;
+	background-size: cover;
+	color: white;
+	font-style: italic;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Configuração da tag h2 dentro da sessaão equipe */
+.sessao_equipe .equipe {
+	font-size: 60px;
+	font-weight: 700;
+	padding-top: 160px;
+	padding-bottom: 40px;
+}
+
+/* Configuração da tag p dentro da sessaão equipe */
+.sessao_equipe .equipe-p {
+	font-size: 25px;
+	font-weight: 600;
+	padding-bottom: 60px;
+	color: white;
+}
+
+/* Configuração geral de exibição do container, para os cartões */
+.container {
+	display: table;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Configuração da tag h2 dentro do container */
+.container h2 {
+	color: white;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+/* Configuração da tag p dentro do container */
+.container p {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	font-style: italic;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/* Configuração dos icones das redes sociais */
+.container a, i {
+	display: inline-block;
+	justify-content: center;
+	margin: 10px;
+}
+
+/* Configuração das fotos de perfil */
+.image {
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	border-radius: 50px;
+	background: #e0e0e0;
+	box-shadow: 20px 20px 60px rgb(27, 27, 27), -20px -20px 60px
+		rgb(27, 27, 27);
+}
+
+/* Configuração geral para todos os card do time */
+.card_felipe, .card_hyago, .card_joao, .card_jose, .card_lucas,
+	.card_thiago {
+	margin: 8px;
+	width: 250px;
+	height: 600px;
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(3.5px);
+	-webkit-backdrop-filter: blur(3.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	position: relative;
+	float: left;
+}
+
+.sessao_equipe .frase {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+/* Fim da sessão grupo 10 */
+
+/* Alinhamentos do display */
+.titulo_startlatam {
+	color: #228B22;
+	font-size: 70px;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	padding-top: 60px;
+}
+
+/* Inicio da sessão Start Latam */
+.sessao_startlatam {
+	padding: 60px;
+}
+
+.sessao_startlatam, .sessao_startlatam .image-startlatam {
+	display: flex;
+}
+
+.sessao_startlatam .text {
+	flex: 50%;
+	font-weight: 700;
+	padding: 0 20px 0 0;
+}
+
+.image-startlatam {
+	width: 600px;
+	height: 450px;
+}
+/* Fim da sessão Start Latam */
+
+/* Inicio do rodapé  
+configurações */
+.rodape {
+	background-color: #26272b;
+	padding: 45px 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+}
+/* Definição da linha divisoria do rodapé */
+.divisoria-rodape {
+	opacity: 0.5;
+	padding-left: 250px;
+	width: 80%;
+	color: white;
+}
+/* Definição de cor do link da StartLatam e Accenture */
+.rodape a {
+	color: #A100FF;
+}
+/* Estilização de hover do link da StartLatam e Accenture */
+.rodape a:hover {
+	text-decoration: overline;
+}
+
+/* Configuração da classe do copyright  */
+.copyright {
+	margin: 0;
+	padding-top: 20px;
+	color: white;
+	font-style: italic;
+	font-size: 18px;
+}
+
+/* Alinhamento dos icones sociais à direita da página */
+.rodape-container .social-icons {
+	padding-top: 20px;
+	align-content: center;
+}
+
+/* Configuração da borda redonda envolta dos icones sociais */
+.rodape-container .social-icons a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 6px;
+	margin-right: 0;
+	border-radius: 100%;
+	background-color: #33353d;
+}
+/* Posição lado a lado dos icones sociais  */
+.social-icons li {
+	display: inline-block;
+}
+/* Controle dos icones sociais
+tamanho, posição, duração da transição do efeito do hover */
+.social-icons a {
+	font-size: 20px;
+	display: inline-block;
+	line-height: 44px;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	border-radius: 100%;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/* Definição da cor do hover dos icones sociais */
+.social-icons a:hover {
+	background-color: #228B22;
+}
+/* Fim do rodapé */

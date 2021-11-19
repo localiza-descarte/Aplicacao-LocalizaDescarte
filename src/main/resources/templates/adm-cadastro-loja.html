@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro Loja</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico"
+	type="image/x-icon">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleCadastroLoja.css">
+<!-- Importando icone do materialize para o botão de voltar  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	<!-- Importando Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>	
+</head>
+
+<body>
+	<div class="seta_voltar">
+		<a href="/"><i class="material-icons">arrow_back</i></a>
+	</div>
+	
+	<div class="registro-loja">
+	<h1>Registre uma conta de lojista</h1>
+	<h2 class="subtitulo-cadastro">Preencha os dados para finalizar o cadastro</h2>
+		<form name="formCadastroLoja" action= /salvarLoja  th:object="${loja}" method="post" enctype="multipart/form-data">
+			<input required type="text" name="nome" placeholder="Nome da Loja" th:field = "*{nome}"/>
+			<input required type="email" name="email" placeholder="E-mail"  th:field = "*{email}"/> 
+			<input required type="text" name="cnpj" id="cnpj" placeholder="CNPJ" maxlength="18"  th:field = "*{cnpj}"/>
+			<input required type="text" name="telefone" id="telefone" placeholder="Telefone da Loja" maxlength="14"  th:field = "*{telefone}"/> 
+			<input required type="password" name="senha" placeholder="Senha"  th:field = "*{senha}"/> 
+			<input required type="password" name="rep_senha" placeholder="Confirmar Senha" />
+			<input type="file" name="fileLogo" placeholder="Logomarca da loja"  />
+			<input type="text" name="CEP" id="cep" placeholder="CEP" maxlength="9" th:field = "*{cep}"/>
+			<input required name="estado" id="estado" placeholder="Estado" maxlength="2"  th:field = "*{estado}"/> 
+		    <input type="text" name="cidade" placeholder="Cidade" maxlength="21"  th:field = "*{cidade}"/>
+		    <input type="text" name="bairro" placeholder="Bairro"  th:field = "*{bairro}"/>
+		    <input type="text" name="rua" placeholder="Rua"  th:field = "*{rua}"/>
+		    <input type="text" name="numero" placeholder="Número e complemento"  th:field = "*{numero}"/>
+		      <select name = "produto" th:field = "*{produto}">
+		    	<option th:each = "prod : ${produtos}" th:text = "${prod}" th:value = "${prod}"></option>
+		    	
+		    </select>
+			<button type="submit" id="Enviar" onclick="return validar()">Registrar Nova Loja</button>
+		     
+		</form>
+	</div>
+
+	<!-- Importando script js para realizar as validações da tela de cadastro -->
+	<script type="text/javascript" src="js/scriptCadastroloja.js"></script>
+	<!-- Importando Jquery para as mascaras do form -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>

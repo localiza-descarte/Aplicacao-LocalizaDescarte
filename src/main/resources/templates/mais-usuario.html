@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuarios Cadastradas</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleMaisUsuario.css">
+<!-- Importando Icone para o menu  -->
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- CDN Link -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<nav class="inicial">
+		<div class="nav-wrapper">
+			<a href="index.html"><img class="logotipo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a><a href="#"
+				data-activates="menu-mobile" class="button-collapse"> <i
+				class="material-icons">menu</i>
+			</a> <a class="texto-pag">Usuários Cadastrados</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="btn-voltar" href="/painel-administrador">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a class="btn-voltar" href="/painel-administrador">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="bloco-usuarios">
+		<div class="container-2">
+			<div class="texto-bloco">
+				<p>Todos os usuários</p>
+				<br />
+				<table class="usuarios_plataforma">
+					<tr>
+						<th>Nome Completo</th>
+						<th>E-mail</th>
+						<th>Remover</th>
+					</tr>
+					<tr th:each = "usuario : ${usuarios}">
+						<td th:text = "${usuario.nome}"></td>
+						<td th:text = "${usuario.email}"></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true" > <a th:href = "@{delete/{cpf} (cpf=${usuario.cpf})}"> </a></i></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

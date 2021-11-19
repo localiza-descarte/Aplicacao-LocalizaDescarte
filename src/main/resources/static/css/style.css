@@ -1,0 +1,375 @@
+/* Configurações globais da página */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'roboto';
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-family: fantasy;
+	font-size: 90px;
+	letter-spacing: 15px;
+	margin: center;
+	color: white;
+}
+
+h2 {
+	color: white;
+	font-size: 80px;
+	font-weight: 400;
+	margin: 0 0 -55px;
+}
+
+h3 {
+	font-size: 40px;
+	font-style: oblique;
+	font-weight: 700;
+	margin: center;
+}
+
+p {
+	color: #2c2c2c;
+	font-size: 20px;
+	font-style: oblique;
+}
+/* Fim das configurações globais */
+
+/* Configurações gerais repetidas */
+
+/* Tipo de aliamento de texto */
+header .text, .sessao_videoDemo .text, .sessao_sobre .text,
+	.sessao_localizacao .text, .sessao_produtos .text, .fixed-image .text,
+	footer {
+	text-align: center;
+}
+
+/* Alinhamentos do display */
+header, .sessao_videoDemo, .sessao_sobre, .sessao_localizacao,
+	.sessao_videoDemo .image-container, .sessao_sobre .image-container,
+	.sessao_localizacao .google-maps, .sessao_produtos {
+	display: flex;
+}
+
+/* Interfere diretamente na visualização do botão de seta, no texto do header e no texto do produto  */
+header, header .text, .fixed-image .text {
+	position: relative;
+}
+
+header .svg-down, header .seta-descer {
+	position: absolute;
+}
+
+/* Para o cursor mudar para o icone de clicar  */
+button, header .seta-descer {
+	cursor: pointer;
+}
+
+header .text .button button {
+	background-color: #fff;
+}
+/* Fim das configurações gerais das sessões */
+
+/* Inicio sessão inicial do site */
+header {
+	height: calc(600px - 22px);
+	width: 100%;
+	left: 0;
+	background-size: cover;
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+}
+/* Menu principal do site */
+#logo {
+	width: 75px;
+	height: 50;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.inicial {
+	position: fixed;
+	margin-top: -35px;
+	background-color: white;
+	z-index: 3;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.login {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+}
+
+.login:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+#login_2 {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+#login_2:hover {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.material-icons {
+	color: rgb(34, 139, 34);
+}
+/* Fim das configurações do menu principal */
+
+/* Definições da sessão inicial header */
+header .text {
+	top: 25%;
+	flex: 50%;
+}
+
+header .text h1 {
+	margin-bottom: 0;
+}
+
+header .text h2 {
+	font-size: 90px;
+	font-style: italic;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+header .text .button button {
+	border: none;
+	padding: 9px 18px;
+	letter-spacing: 2.4px;
+	font-size: 25px;
+	border-radius: 3px;
+	outline: none;
+	transition: .3s;
+}
+
+header .text .button button:hover {
+	background-color: rgb(34, 139, 34);
+	color: rgb(247, 247, 247);
+}
+
+header .svg-down {
+	bottom: 0;
+	left: 50%;
+	z-index: 1;
+	margin-left: -96px;
+	margin-bottom: -12px;
+	color: #fff;
+}
+
+header .seta-descer {
+	width: 70px;
+	height: 50px;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 2;
+	background: url("../img/arrow-down.png") no-repeat center;
+}
+/* Fim da sessão inicial do site */
+
+/* Inicio das configurações da repetidas das sessões 
+video demo, sobre e parceiros */
+.sessao_videoDemo, .sessao_sobre, .sessao_localizacao {
+	padding: 60px;
+}
+/* Fundo da verda da sessão do sobre e localização */
+.sessao_sobre, .sessao_localizacao {
+	background-color: #228B22;
+}
+/* Posicionamento das classes de texto */
+.sessao_videoDemo .text, .sessao_sobre .text, .sessao_localizacao .text
+	{
+	flex: 50%;
+	padding: 40px 50px 0 0;
+}
+/* Definição da cor verde do h2 da sessão do video demo */
+.sessao_videoDemo .text h2 {
+	color: #228B22;
+	font-weight: bold;
+	font-style: italic;
+}
+/* Definição da cor branca do h2 da sessão do sobre e localização */
+.sessao_sobre .text h2, .sessao_localizacao .text h2 {
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+}
+/* Definição da cor branca do p da sessão sobre e localização */
+.sessao_sobre .text p, .sessao_localizacao .text p {
+	color: white;
+}
+/* Configuração de exibição lado a lado do iframe e imagens nas sessões */
+.sessao_videoDemo .image-container, .sessao_sobre .image-container,
+	.sessao_localizacao .image-container {
+	flex: 50%;
+}
+/* Fim das configurações da sessão sobre e parceiros */
+
+/* Inicio do Recipes */
+.recipes .image {
+	height: 350px;
+	background: url("../img/reciclagem.png") fixed center;
+	background-size: cover;
+}
+/* Fim do Recipes */
+
+/* Inicio da sessão dos produtos que oferecemos suporte */
+.sessao_produtos {
+	padding: 60px;
+}
+
+.img_menu {
+	max-width: 100%;
+}
+
+.sessao_produtos .imagens-produtos {
+	flex-wrap: wrap;
+	flex: 60%;
+	display: flex;
+}
+
+.sessao_produtos .imagens-produtos .image {
+	margin: 0 20px 20px 0;
+	flex: calc(50% - 40px);
+}
+
+.sessao_produtos .text {
+	flex: 50%;
+	padding: 20px 0 0 40px;
+	color: #228B22;
+}
+
+.sessao_produtos .text h3 {
+	font-size: 60px;
+	font-weight: 600;
+	color: #228B22;
+}
+
+.sessao_produtos p {
+	color: #228B22;
+}
+/* Fim da sessão dos produtos que oferecemos suporte */
+
+/* Inicio da sessão imagem */
+.fixed-image {
+	background: url("../img/pernanbuco.jpg") fixed center;
+	background-size: cover;
+	height: 300px;
+	margin-top: -50px;
+}
+
+.fixed-image .text {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.fixed-image h2 {
+	font-size: 60px;
+	font-weight: 700;
+	font-style: italic;
+}
+/* Fim da sessão imagem */
+
+/* Inicio do rodapé  
+configurações */
+.rodape {
+	background-color: #26272b;
+	padding: 45px 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+}
+/* Definição da linha divisoria do rodapé */
+.divisoria-rodape {
+	opacity: 0.5;
+	padding-left: 250px;
+	width: 80%;
+	color: white;
+}
+/* Definição de cor do link da StartLatam e Accenture */
+.rodape a {
+	color: #A100FF;
+}
+/* Estilização de hover do link da StartLatam e Accenture */
+.rodape a:hover {
+	text-decoration: overline;
+}
+
+/* Configuração da classe do copyright  */
+.copyright {
+	margin: 0;
+	padding-top: 20px;
+	color: white;
+	font-style: italic;
+	font-size: 18px;
+}
+
+/* Alinhamento dos icones sociais à direita da página */
+.rodape-container .social-icons {
+	padding-top: 20px;
+	align-content: center;
+}
+
+/* Configuração da borda redonda envolta dos icones sociais */
+.rodape-container .social-icons a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 6px;
+	margin-right: 0;
+	border-radius: 100%;
+	background-color: #33353d;
+}
+/* Posição lado a lado dos icones sociais  */
+.social-icons li {
+	display: inline-block;
+}
+/* Controle dos icones sociais
+tamanho, posição, duração da transição do efeito do hover */
+.social-icons a {
+	font-size: 16px;
+	display: inline-block;
+	line-height: 44px;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	border-radius: 100%;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/* Definição da cor do hover dos icones sociais */
+.social-icons a:hover {
+	background-color: #228B22;
+}
+/* Fim do rodapé */

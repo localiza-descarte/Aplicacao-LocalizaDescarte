@@ -1,0 +1,309 @@
+/* Configurações globais da página */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Configuração do corpo do site */
+body {
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+}
+
+/* Menu principal do site */
+#logo {
+	width: 75px;
+	height: 50;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.inicial {
+	position: static;
+	background-color: white;
+	z-index: 3;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.botao {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+	margin-left: 2px;
+}
+
+.botao:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+.fa-calendar-minus-o, .fa-cog, .fa-sign-out {
+	margin-left: 10px;
+}
+
+.botao-2 {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.botao-2:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+.material-icons {
+	color: rgb(34, 139, 34);
+}
+/* Fim das configurações do menu principal */
+
+/* Inicio das configurações da barra de pesquisa da tela do usuário */
+.container-busca {
+	margin-top: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'roboto';
+}
+
+.container-mais {
+	margin-top: 1%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'roboto';
+}
+/* Configurações da barra de busca */
+.barra-busca {
+	position: relative;
+	padding: 15px;
+	border-radius: 50px;
+	display: flex;
+	width: 500px;
+	height: 80px;
+}
+
+/* Configurações do botão de mais loja */
+.botao-mais {
+	position: relative;
+	padding: 15px;
+	border-radius: 50px;
+	display: flex;
+	width: 150px;
+	height: 50px;
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+/* Configurações da exibição do botão de busca */
+.busca_btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.barra-busca, .busca_btn {
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(3.5px);
+	-webkit-backdrop-filter: blur(3.5px);
+}
+/* Configurações da exibição do texto do input 
+do usuário na barra de busca */
+.input_busca {
+	padding: 0px 20px;
+	color: white;
+}
+
+/* Configurações da exibição do texto do input do mais loja no btn */
+.input_mais {
+	padding: 3px 15px;
+	color: white;
+	font-size: 12px;
+	cursor: pointer;
+}
+/* Fim das configurações da barra de pesquisa da tela do usuário */
+
+/* Inicio da sessão lojas
+Configuração do tamanho da div da sessão / definição da imagem de fundo 
+/ configurações gerais a div */
+.sessao_loja {
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 50px;
+	justify-content: center;
+	align-items: center;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+/* Configuração geral de exibição do container, para os cartões */
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+/* Configuração da tag h2 de todos os cards */
+.container h2 {
+	color: white;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Configuração geral para todos os card das lojas, exibindo a transparência e os efeitos */
+.card_lojaA, .card_lojaB, .card_lojaC {
+	margin: 5px;
+	width: 400px;
+	height: 600px;
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(3.5px);
+	-webkit-backdrop-filter: blur(3.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	float: left;
+	position: relative;
+}
+/* Configuração das imagens das logomarcas */
+.image {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	border-radius: 25px;
+	background: #e0e0e0;
+	box-shadow: 10px 10px 40px rgb(27, 27, 27), -10px -10px 40px
+		rgb(27, 27, 27);
+}
+
+/* Configuração da tag p dentro do container */
+.endereco, .cep, .telefone, .estado {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+.endereco {
+	margin-top: 20px;
+}
+
+.estado {
+	margin-bottom: 40px;
+}
+/* Fim da sessão loja */
+
+/* Botão */
+.btn-agendamento {
+	border-radius: 20px;
+	border: rgb(34, 139, 34) solid 1px;
+	color: white;
+	background-color: rgb(34, 139, 34);
+	padding: 10px 35px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-style: italic;
+	margin-top: 40px;
+}
+
+.btn-agendamento:hover {
+	color: #228b22;
+	background-color: white;
+	border: rgb(34, 139, 34) solid 1px;
+}
+/* Fim botão */
+
+/* Inicio do rodapé  
+configurações */
+.rodape {
+	background-color: #26272b;
+	padding: 45px 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	text-align: center;
+}
+/* Definição da linha divisoria do rodapé */
+.divisoria-rodape {
+	opacity: 0.5;
+	padding-left: 250px;
+	width: 80%;
+	color: white;
+}
+/* Definição de cor do link da StartLatam e Accenture */
+.rodape a {
+	color: #A100FF;
+}
+/* Estilização de hover do link da StartLatam e Accenture */
+.rodape a:hover {
+	text-decoration: overline;
+}
+
+/* Configuração da classe do copyright  */
+.copyright {
+	margin: 0;
+	padding-top: 20px;
+	color: white;
+	font-style: italic;
+	font-size: 18px;
+}
+
+/* Alinhamento dos icones sociais à direita da página */
+.rodape-container .social-icons {
+	padding-top: 20px;
+	align-content: center;
+}
+
+/* Configuração da borda redonda envolta dos icones sociais */
+.rodape-container .social-icons a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 6px;
+	margin-right: 0;
+	border-radius: 100%;
+	background-color: #33353d;
+}
+/* Posição lado a lado dos icones sociais  */
+.social-icons li {
+	display: inline-block;
+}
+/* Controle dos icones sociais
+tamanho, posição, duração da transição do efeito do hover */
+.social-icons a {
+	font-size: 16px;
+	display: inline-block;
+	line-height: 44px;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	border-radius: 100%;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/* Definição da cor do hover dos icones sociais */
+.social-icons a:hover {
+	background-color: #228B22;
+}
+/* Fim do rodapé */

@@ -1,0 +1,47 @@
+#home_login{
+	margin-left: 15px;
+	border: #228b22 solid 2px;
+	border-radius: 6px;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+	z-index: 10000;
+	left: 4px;
+	position: absolute;
+}
+#home_login:hover {
+	background-color: white;
+	color: rgb(34, 139, 34);
+}
+#home_login a {
+	color: white;
+	list-style: none;
+}
+#home_produtos{
+	margin-left: 110px;
+	border: #228b22 solid 2px;
+	border-radius: 6px;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+	z-index: 10000;
+	left: 4px;
+	position: absolute;
+}
+#home_produtos:hover {
+	background-color: white;
+	color: rgb(34, 139, 34);
+}
+#home_produtos a {
+	color: white;
+	list-style: none;
+}
+body{
+   	background: url("../img/fundo-verde.jpg") fixed bottom;
+}

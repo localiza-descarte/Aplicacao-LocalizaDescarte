@@ -1,0 +1,119 @@
+@charset "ISO-8859-1";
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+	font-family: 'roboto';
+}
+/* Menu principal do site */
+.logotipo {
+	width: 75px;
+	height: 60;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.texto-pag {
+	margin-left: 10px;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #228B22;
+	font-size: 30px;
+	position: absolute;
+	top: 1%
+}
+
+.inicial {
+	position: static;
+	background-color: white;
+	z-index: 3;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.btn-voltar {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+}
+
+.btn-voltar:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+.fa-arrow-circle-left{
+	display: inline;
+	margin-left: 15px;
+}
+
+#cadastro_2 {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+#cadastro_2:hover {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+/* Fim das configurações do menu principal */
+
+
+/* Inicio do controle do bloco do painel.
+ Posição, tamanho do bloco */
+.texto-bloco {
+	padding: 20px;
+}
+
+.texto-bloco p {
+	margin: 0px;
+	font-size: 30px;
+	font-style: italic;
+	color: white;
+	display: flex;
+}
+
+.texto-bloco .agenda {
+	text-align: center;
+	font-size: 30px;
+}
+
+.container-2 {
+	margin-left:30%;	
+	margin-right:30%;	
+	margin-top:50px;
+	margin-bottom:50px;
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 600px;
+	height: 580px;
+}
+/* Fim do controle do bloco do painel */
+
+/* Inicio da configuração tabela da loja */
+
+td, th {
+	text-align: left;
+	padding: 15px;
+	color: #ddd;
+	border-bottom: 1px solid #81818140;
+}
+
+#icon_editar{
+	cursor: pointer;
+	color: white;
+}
+
+#icon_remover {
+	cursor: pointer;
+}
+/* Fim da configuração da tabela da loja */
