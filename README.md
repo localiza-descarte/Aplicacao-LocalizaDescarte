@@ -37,7 +37,7 @@
 
 <div>
  
-#### O HTML5 e o CSS3 foi utilizado para gerar o design das páginas web, o JavaScript foi utilizado em algumas páginas para efeitos de transição. 
+#### O HTML5 e o CSS3 foi utilizado para gerar o design das páginas web, o JavaScript foi utilizado em algumas páginas para efeitos de animações e transições. 
  
 #### Utilizamos o Jquery para criar validações em nossos formulários HTML, em um campo (input) que não for preenchido, o Jquery ficou responsável por emitir um pop-up como um alerta de obrigatoriedade de preenchimento do mesmo. Criamos mascaras para o preenchimento dos campos, esses elementos são criados automaticamente enquanto o usuário digita os números, por exemplo: CPF: 000.000.000-00, existem mascaras para CNPJ: 00.000.000/0000-00, CEP: 00000-000 e Telefone: (00) 0 0000-0000.  
  
