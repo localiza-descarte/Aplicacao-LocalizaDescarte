@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>Tela Inicial</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleUsuario.css">
+<!-- Importando icone para a barra de busca -->
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<!-- Importando icone para o menu  -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- Importando icones de rede social para o rodapé -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!-- Importando Jquery para criação do menu -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<!-- Inicio da sessão inicial do site  -->
+	<nav class="inicial">
+		<div class="nav-wrapper">
+			<a href="/index" class="brand-logo"><img id="logo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a> <a href="#"
+				data-activates="menu-mobile" class="button-collapse"> <i
+				class="material-icons">menu</i>
+			</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="botao" href="/agendamentos-usuario">Agendamentos<i
+						class="fa fa-calendar-minus-o" aria-hidden="true"></i></a></li>
+				 <li><a class="botao" th:href = "|/editar?cpf=${session.usuarioLogado.cpf}|"> <span th:text="${session.usuarioLogado.nome}" ></span><i
+						class="fa fa-cog" aria-hidden="true"></i></a></li> 
+						
+						
+				<li><a class="botao" th:href="@{/logout}">Sair<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a class="botao-2" href="/agendamentos-usuario">Agendamento<i
+						class="fa fa-calendar-minus-o" aria-hidden="true"></i></a></li>
+				<li><a class="botao-2"> <span th:text="${session.usuarioLogado.nome}"></span>  <i class="fa fa-cog" aria-hidden="true"></i></a></li>
+				<li><a class="botao-2" href="/logout">Sair<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Barra de busca -->
+	<div class="container-busca">
+		<div class="barra-busca">
+			<div class="busca_btn">
+				<i class="fas fa-search"></i>
+			</div>
+			<input type="text" class="input_busca"
+				placeholder="Encontre a loja mais próxima">
+		</div>
+	</div>
+	
+	<!-- botão de pesquisar mais -->
+	<div class="container-mais">
+		<div class="botao-mais">
+			<a class="input_mais">Ver outras lojas</a>
+		</div>
+	</div>
+
+	<!-- Inicio da sessão de exibição das lojas -->
+	<div id="sessao_loja" class="sessao_loja">
+		<div class="container">
+			<div class="card_lojaA" th:each = "loja: ${lojas}">
+				<h2 th:text="${loja.nome}">
+				</h2>
+				<img alt="Image" class="image" th:src="|/logo/${loja.cnpj}|" /><br>
+				<p class="endereco" th:text="${loja.rua}"></p>
+				<p> <a class="cep" th:text="${loja.cep}"></a></p>
+				<p class="telefone" th:text="${loja.telefone}"></p>
+				<p class="estado" th:text="${loja.estado}" ></p>
+				<a class="btn-agendamento" th:href="|/agendamento?cnpj=${loja.cnpj}|">Agendar Descarte</a>
+			</div>
+		</div>
+	</div>
+	<!-- Fim da sessão de exibição das lojas -->
+
+	<!-- Inicio do rodapé -->
+	<footer class="rodape">
+		<div class="rodape-container">
+			<div class="row">
+				<div>
+					<ul class="info-rodape">
+						<li>Recife, Pernambuco</li>
+						<li>Tel: (81) 99999-9999</li>
+						<li>Fomos fundado no programa <a class="startlatam"
+							href="https://www.redecidada.org.br/projetos/projeto-start-latam/"
+							target="black">StartLatam</a> Powered By <a class="startlatam"
+							href="https://www.accenture.com/br-pt" target="black">Accenture</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="divisoria-rodape">
+			<hr>
+		</div>
+		<div class="rodape-container">
+			<div class="row">
+				<div>
+					<p class="copyright">Copyright &copy; 2021 Localiza Descarte</p>
+				</div>
+				<div>
+					<ul class="social-icons">
+						<li><a href="https://github.com/localiza-descarte"
+							target="black"><i class="fa fa-github" style="color: white"></i></a></li>
+						<li><a
+							href="https://www.youtube.com/channel/UC2VSza3xDObcgIFBIkE1kyg"
+							target="black"><i class="fa fa-youtube-play"
+								style="color: white" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Fim do rodapé-->
+</body>
+</html>

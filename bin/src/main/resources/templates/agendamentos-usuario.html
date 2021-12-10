@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Agendamentos realizados</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando fontes e icones -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Importando CSS -->
+<link rel="stylesheet"
+	href="css/styleAgendamentos-usuario.css">
+<!-- Importando Icone para o menu  -->
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- CDN Link -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Importando Jquery para criação do menu -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<!-- Inicio do menu inicial da página  -->
+	<nav class="inicial">
+		<div class="nav-wrapper">
+			<a href="/index"><img class="logotipo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a><a href="#"
+				data-activates="menu-mobile" class="button-collapse"><i
+				class="fa fa-bars" aria-hidden="true"></i> </a> <a class="texto-pag">Agendamentos
+				realizados</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="cadastro" href="/usuario">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a class="cadastro_2" href="/usuario">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Fim do menu inicial da página  -->
+	<div class="agendamentos-realizados">
+		<div class="texto-bloco">
+			<p class="titulo-bloco">
+				Agendamentos marcados
+			</p>
+			<br>
+			<table class="lojas_plataforma">
+				<tr>
+					<th>Loja</th>
+					<th>Bairro</th>
+					<th>Dia agendado</th>
+					<th>Horário</th>
+					<th>Desmarcar</th>
+				</tr>
+				<tr>
+					<td>Casas Montanhosas</td>
+					<td>Torreão</td>
+					<td>02/11/2021</td>
+					<td>10:30</td>
+					<td><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+				</tr>
+				<tr>
+					<td>Nordeste Eletronico</td>
+					<td>Torreão</td>
+					<td>21/11/2021</td>
+					<td>11:00</td>
+					<td><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+				</tr>
+				<tr>
+					<td>Start Produtos</td>
+					<td>Iputinga</td>
+					<td>10/11/2021</td>
+					<td>14:00</td>
+					<td><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+				</tr>
+				<tr>
+					<td>Lojas Net</td>
+					<td>Boa Viagem</td>
+					<td>15/11/2021</td>
+					<td>15:00</td>
+					<td><i class="fa fa-times-circle" aria-hidden="true"></i></td>
+				</tr>
+			</table>
+			<a class="btn-mais" href="#">Outros agendamentos</a>
+		</div>
+	</div>
+</body>
+</html>

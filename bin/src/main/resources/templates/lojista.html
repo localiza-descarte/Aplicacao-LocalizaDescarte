@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel da Loja</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleLojista.css">
+<!-- Importando icone para o menu  -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- CDN Link -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Importando Jquery para criação do menu -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<!-- Inicio do menu inicial da página  -->
+	<nav class="inicial">
+		<div class="nav-wrapper">
+			<a href="/index"><img class="logotipo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a><a href="#"
+				data-activates="menu-mobile" class="button-collapse"><i
+				class="material-icons">menu</i> </a> <a class="texto-pag">Nome Loja</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="botao" href="/configuracao-loja">Configurações
+						da loja<i class="fa fa-cog" aria-hidden="true"></i>
+				</a></li>
+				<li><a class="botao" href="/login-lojista">Sair<i
+						class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a class="botao-2" href="/configuracao-loja">Configurações
+						da loja<i class="fa fa-cog" aria-hidden="true"></i>
+				</a></li>
+				<li><a class="botao-2" href="/login-lojista">Sair<i
+						class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Fim do menu inicial da página  -->
+	
+	<!-- Paineis localizados na parte superior da página -->
+	<div id="sessao_cards" class="sessao_cards">
+		<div class="cards">
+			<div class="card_usuario">
+				<h2>
+					Agendamentos no<br>dia
+				</h2>
+				<p class="qnt_usuarios">Número total</p>
+				<i id="usuario-inscritos" class="fa fa-calendar-check-o"
+					aria-hidden="true"></i>
+			</div>
+
+			<div class="card_loja">
+				<h2>
+					Agendamentos na<br>semana
+				</h2>
+				<p class="qnt_lojas">Número total</p>
+				<i id="lojas-inscritas" class="fa fa-calendar-plus-o"
+					aria-hidden="true"></i>
+			</div>
+			<div class="card_agendamento">
+				<h2>
+					Total de<br>Agendamentos
+				</h2>
+				<p class="qnt_agendamentos">Número total</p>
+				<i id="agnd-concluida" class="fa fa-calendar" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div class="espaco-em-branco"></div>
+	<br />
+	<!-- Div responsavel pela caixa retangular localizada na esquerda da página -->
+	<div class="bloco-loja">
+		<div class="container-1">
+			<div class="texto-bloco">
+				<div class="grafico">
+					<div id="chart"></div>
+					<script type="text/javascript"
+						src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+						google.charts.load('current', {
+							packages : [ 'corechart' ]
+						})
+						google.charts.setOnLoadCallback(drawChart)
+
+						function drawChart() {
+							const container = document.querySelector('#chart')
+							const data = new google.visualization.arrayToDataTable(
+									[ [ 'Character', 'Produto' ],
+											[ 'Total', 10000 ],
+											[ 'Últimas 24 horas', 100 ],
+											[ 'Últimas 07 dias', 560 ],
+											[ 'Últimos 3 meses', 3000 ],
+											[ 'Últimos 3 meses', 8000 ] ])
+							const options = {
+								title : 'Clientes ',
+								height : 350,
+								width : 550,
+							}
+							const chart = new google.visualization.ColumnChart(
+									container)
+							// const chart = new google.visualization.BarChart(container)
+							// const chart = new google.visualization.LineChart(container)
+							//const chart = new google.visualization.PieChart(container)
+							chart.draw(data, options)
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

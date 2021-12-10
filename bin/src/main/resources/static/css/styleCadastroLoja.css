@@ -1,0 +1,116 @@
+/* Importando fonte roboto do google */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+/*Configuração para todo o corpo da página */
+body {
+	display: flex;
+	background: url("../img/fundo-cadastro.jpg") fixed bottom;
+	background-size: cover;
+	font-family: "roboto";
+}
+
+/*Configuração do h1, titulo de registro da página */
+h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 25px;
+	color: white;
+	text-align: center;	
+	
+}
+/*Configuração do h2, subtitulo de registro da página */
+.subtitulo-cadastro {
+	color: white;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-style: italic;
+	text-align: center;
+}
+
+/* Botão de voltar para página inicial */
+.seta_voltar i {
+	border-radius: 50%;
+	background: white;
+	color: #228b22;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	position: absolute;
+	z-index: 100;
+	left: 15px;
+	margin: 10px;
+}
+
+
+/* Configurações do botão de registro */
+button {
+	border-radius: 20px;
+	border: rgb(34, 139, 34) solid 1px;
+	color: white;
+	background-color: rgb(34, 139, 34);
+	padding: 12px 40px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+button:hover {
+	color: #228b22;
+	background-color: white;
+	border: rgb(34, 139, 34) solid 1px;
+}
+
+/* Configuração da div de registro */
+.registro-loja {
+	width: 50%;
+	height: 80%;
+	position: static;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+/* Inicio da configurações do formulário de registro */
+form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Configurações das layers de input do form */
+input {
+	background: rgba(43, 38, 38, 0.3);
+	backdrop-filter: blur(2.5px);
+	-webkit-backdrop-filter: blur(2.5px);
+	border-radius: 10px;
+	margin: 6px 0;
+    padding: 6px 2px;
+	color: white;
+}
+
+label  {
+	color: white;
+	
+}
+
+::placeholder {
+	color: white;
+}
+
+.imagem-logo {
+	font-family: "roboto";
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	margin: 0;
+}

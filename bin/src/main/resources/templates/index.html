@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Localiza Descarte</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando fontes e icones -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Importando icones de rede social para o rodapé -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Importando Materialize -->
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+</head>
+
+<body>
+	<!-- Importando Jquery para criação do menu -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<!-- Script para o funcionamento do menu  -->
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<!-- Inicio da sessão inicial do site  -->
+	<header>
+
+		<nav class="inicial">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo"><img id="logo"
+					src="img/logomarca/logo.png"
+					alt="Logotipo Localiza Descarte"></a> <a href="#"
+					data-activates="menu-mobile" class="button-collapse"> <i
+					class="material-icons">menu</i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a class="bottom" href="#videoDemo">Como utilizar?</a></li>
+					<li><a class="bottom" href="#sobre">Nossa Visão</a></li>
+					<li><a class="bottom" href="#produtos">Produtos</a></li>
+					<li><a class="bottom" href="#localizacao">Atuação</a></li>
+					<li><a class="login" href="/cadastro">Entrar</a></li>
+				</ul>
+				<ul class="side-nav" id="menu-mobile">
+					<li><a class="bottom" href="#videoDemo">Como utilizar?</a></li>
+					<li><a class="bottom" href="#sobre">Nossa Visão</a></li>
+					<li><a class="bottom" href="#produtos">Produtos</a></li>
+					<li><a class="bottom" href="#localizacao">Atuação</a></li>
+					<li><a id="login_2" href="/cadastro">Entrar</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="text">
+			<h1>LOCALIZA DESCARTE</h1>
+			<h2>Bem-vindes!</h2>
+			<div class="button">
+				<form action="/sobre">
+					<button type="submit">Nosso Projeto</button>
+				</form>
+			</div>
+		</div>
+
+		<svg href="#sobre" class="svg-down" width="192" height="61"
+			version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5"
+			xml:space="preserve">
+            <path fill="currentColor"
+				d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z">
+            </path>
+        </svg>
+		<a class="seta-descer" href="#videoDemo"></a>
+	</header>
+	<!-- Fim da sessão inicial do site  -->
+
+	<!-- Inicio da sessão video demo -->
+	<div id="videoDemo" class="sessao_videoDemo">
+		<div class="text">
+			<h2 class="titulo_sessao">
+				Conheça nossa<br>plataforma
+			</h2>
+			<p>
+				É a sua primeira vez por aqui?<br>Desenvolvemos um vídeo
+				pensando em você. Nele você aprenderá a utilizar toda a nossa
+				aplicação, e poderá efetuar já o seu descarte consciente, é simples.
+			</p>
+		</div>
+		<div class="image-container">
+			<!-- iframe do youTube para implementação do passo a passo -->
+			<iframe width="600" height="450"
+				src="https://www.youtube-nocookie.com/embed/iCn5hMpAyrM"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+	</div>
+	<!-- Fim da sessão nossa video demo -->
+
+	<!-- Inicio da sessão nossa visão -->
+	<div id="sobre" class="sessao_sobre">
+		<div class="text">
+			<h2 class="titulo_sessao">NOSSA VISÃO</h2>
+			<p>Nosso projeto foi desenvolvido com o intuito de conectar
+				usuários que possuem equipamentos eletrônicos antigos ou quebrados,
+				para realizarem um descarte consciente. Rebendo benefícios por isso
+				e o mais importante, ajudando o meio ambiente!</p>
+		</div>
+		<div class="image-container">
+			<div class="image image1">
+				<img src="img/logomarca/localiza-branca.png"
+					alt="Logomarca foto">
+			</div>
+			<div class="image image2">
+				<img src="img/e-lixo.png" alt="lixos eletrônicos Photo">
+			</div>
+		</div>
+	</div>
+	<!-- Fim da sessão nossa visão -->
+
+	<!-- Inicio da sessão produtos-->
+	<div id="produtos" class="sessao_produtos">
+		<div class="imagens-produtos">
+			<div class="image">
+				<img class="img_menu"
+					src="img/notebook-localizaDescarte.png"
+					alt="notebook Photo">
+			</div>
+			<div class="image">
+				<img class="img_menu"
+					src="img/tablet-localizaDescarte.png" alt="Tablet Photo">
+			</div>
+			<div class="image">
+				<img class="img_menu" src="img/tv-localizaDescarte.png"
+					alt="TV Photo">
+			</div>
+			<div class="image">
+				<img class="img_menu"
+					src="img/celular-localizaDescarte.png"
+					alt="Celular Photo">
+			</div>
+		</div>
+		<div class="text">
+			<h3>PRODUTOS</h3>
+			<p>Os produtos que atualmente são possíveis de realizar o
+				descarte são:</p>
+			<p>
+				<br>* Notebook * Tablet * TV * Celular
+			</p>
+			<p>
+				<br>Ao descartar um produto em uma loja cadastrada, você não só
+				estará fazendo um bem para você mas para todo o meio ambiente, um
+				produto eletrônico jogado de forma indevida no lixo causa grandes
+				estragos a natureza.
+			</p>
+		</div>
+	</div>
+	<!-- Fim da sessão produtos -->
+
+	<!-- Inicio da sessão imagem de Recife -->
+	<div class="fixed-image">
+		<div class="text">
+			<h2>ONDE ESTAMOS?</h2>
+		</div>
+	</div>
+	<!-- Fim da sessão imagem -->
+
+	<!-- Inicio da sessão parceiros -->
+	<div id="localizacao" class="sessao_localizacao">
+		<div class="text">
+			<h2 class="titulo_sessao">ESTAMOS</h2>
+			<h2 class="titulo_sessao">EM RECIFE</h2>
+			<p>Atualmente estamos operando no Nordeste no estado de
+				Pernambuco, na cidade de Recife. Nosso projeto envolve lojas
+				parceiras interessadas na problemática. Que se cadastram em nossa
+				plataforma, estamos trabalhando para expandir nossa visão</p>
+		</div>
+		<div class="google-maps">
+			<!-- iframe do google para implementação do mapas na sessão -->
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252836.63053622082!2d-35.0743056227061!3d-8.04294749632758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab196f94e5408b%3A0xe5800ef782bde3a6!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1633010070480!5m2!1spt-BR!2sbr"
+				width="600" height="450" style="border: 0;" allowfullscreen=""
+				loading="lazy"></iframe>
+		</div>
+	</div>
+	<!-- Fim da sessão parceiros -->
+
+	<!-- Inicio do rodapé -->
+	<footer class="rodape">
+		<div class="rodape-container">
+			<div class="row">
+				<div>
+					<ul class="info-rodape">
+						<li>Recife, Pernambuco</li>
+						<li>Tel: (81) 99999-9999</li>
+						<li>Fomos fundado no programa <a class="startlatam"
+							href="https://www.redecidada.org.br/projetos/projeto-start-latam/"
+							target="black">StartLatam</a> Powered By <a class="startlatam"
+							href="https://www.accenture.com/br-pt" target="black">Accenture</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="divisoria-rodape">
+			<hr>
+		</div>
+		<div class="rodape-container">
+			<div class="row">
+				<div>
+					<p class="copyright">Copyright &copy; 2021 Localiza Descarte</p>
+				</div>
+				<div>
+					<ul class="social-icons">
+						<li><a href="https://github.com/localiza-descarte"
+							target="black"><i class="fa fa-github" style="color: white"></i></a></li>
+						<li><a
+							href="https://www.youtube.com/channel/UC2VSza3xDObcgIFBIkE1kyg"
+							target="black"><i class="fa fa-youtube-play"
+								style="color: white" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Fim do rodapé-->
+</body>
+</html>

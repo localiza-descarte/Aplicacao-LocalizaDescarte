@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lojas Cadastradas</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleMaisLoja.css">
+<!-- Importando Icone para o menu  -->
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- CDN Link -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+		<nav class="inicial">
+		<div class="nav-wrapper">
+			<a href="/index"><img class="logotipo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a><a href="#"
+				data-activates="menu-mobile" class="button-collapse"> <i
+				class="material-icons">menu</i>
+			</a> <a class="texto-pag">Lojas Cadastradas</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="btn-voltar" href="/painel-administrador">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a class="btn-voltar" href="cadastro-loja.html">Voltar<i
+						class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="bloco-usuarios">
+		<div class="container-2">
+			<div class="texto-bloco">
+				<p>Todas as lojas</p>
+				<br />
+				<table class="lojas_plataforma">
+					<tr>
+						<th>Empresa</th>
+						<th>Bairro</th>
+						<th>Editar</th>
+						<th>Remover</th>
+					</tr>
+					<tr>
+						<td>Casas Montanhosas</td>
+						<td>Torreão</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Nordeste Eletronico</td>
+						<td>Torreão</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Start Produtos</td>
+						<td>Iputinga</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Lojas Net</td>
+						<td>Boa Viagem</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Hora da Compra</td>
+						<td>Encruzilhada</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Imperio Lab</td>
+						<td>Torre</td>
+						<td><a href="configuracao-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Lojas Ligados</td>
+						<td>Boa Viagem</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Smart Device</td>
+						<td>Santana</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
+							aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

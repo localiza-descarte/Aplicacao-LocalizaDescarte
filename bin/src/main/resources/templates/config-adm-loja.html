@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurações da loja</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleConfig-loja.css">
+<!-- Importando icones do materialize para o menu -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+</head>
+<body>
+	<!-- Inicio da div do botão de voltar -->
+	<div class="btn-voltar">
+		<a href="/"><i class="material-icons">arrow_back</i></a>
+	</div>
+	<!-- Fim da div do botão de voltar -->
+	<div class="registro-loja">
+		<form action="#">
+			<h1>Alterar dados da loja</h1>
+			<h2 class="subtitulo-cadastro">Preencha as informações desejadas e clique no
+				botão "Salvar Alterações".</h2>
+			<input type="text" placeholder="Nome da Loja" />
+			<input type="email" placeholder="E-mail" />
+			<input type="text" name="telefone" id="telefone" placeholder="Telefone da Loja" maxlength="14" onkeyup="mascara_telefone()" /> 
+			<input type="password" placeholder="Senha" /> 
+			<input type="password" placeholder="Confirmar Senha" />
+			<br>
+			<h2 class="imagem-logo">Novo logotipo</h2>
+			<input type="file" placeholder="Logomarca da loja" />
+		</form>
+	</div>
+	<div class="registro-loja-2">
+		<form action="#">
+			<input type="text" id="cep" placeholder="CEP" maxlength="9" onkeyup="mascara_cep()" />
+			<select required name="estado" id="estado">
+                <option value="">Selecione Estado(UF)...</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+                <option value="DF">DF</option>
+            </select> 
+			<input type="text" placeholder="Cidade" maxlength="21" /> 
+			<input type="text" placeholder="Bairro" /> 
+			<input type="text" placeholder="Rua" />
+			<input type="text" placeholder="Número" />
+			<input type="text" placeholder="Complemento" />
+			<button>Salvar Alterações</button>
+		</form>
+	</div>
+	<!-- Importando script Js para realizar as validações da tela de cadastro -->
+	<script type="text/javascript" src="js/scriptConfigAdmLoja.js"></script>
+</body>
+</html>

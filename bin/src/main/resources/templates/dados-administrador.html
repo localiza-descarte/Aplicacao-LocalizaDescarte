@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Configurações do administrador</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleDados-administrador.css">
+<!-- Importando icones do materialize para o menu -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<body>
+	<!-- Inicio da div do botão de voltar -->
+	<div class="btn-voltar">
+		<a href="/painel-administrador"><i class="material-icons">arrow_back</i></a>
+	</div>
+	<!-- Fim da div do botão de voltar -->
+	
+	<!-- Inicio da div de configurações da conta do administrador -->
+	<div class="config-adm">
+		<form name="formRedefinir" action="#">
+			<h1>Configurações do Administrador</h1>
+			<br>
+			<h2 class="subtitulo">Preencha as informações desejadas e clique
+				no botão "Salvar Alterações".</h2>
+			<input name="nome" type="text" placeholder="Nome do Administrador" />
+			 <input name="email" type="email" placeholder="E-mail" /> 
+			 <input name="senha_atual" type="password" placeholder="Senha Atual" /> 
+			 <input name="nova_senha" type="password" placeholder="Nova Senha" /> 
+			 <input name="rep_senha" type="password" placeholder="Confirmar Nova Senha" />
+			 <button >Salvar Alterações</button>
+		</form>
+	</div>
+	<!-- Fim da div -->
+	
+	<!-- Importando script js para as validações -->
+	<script type="text/javascript" src="js/scriptDadosAdministrador.js"></script>
+</body>
+</html>

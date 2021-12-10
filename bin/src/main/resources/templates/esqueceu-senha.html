@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Esqueceu a senha?</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando fontes e icones -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleEsqueceuSenha.css">
+<!-- Importando Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>	
+</head>
+
+<body>
+	<div class="redefinir-senha">
+	<div class="seta_voltar">
+		<a href="/cadastro"><i class="material-icons">arrow_back</i></a>
+	</div>
+		<form name="formRedefinir" action="/EnviarDadosSenha" method="post">
+			<h1>Esqueceu a senha?</h1>
+			<h2 class="subtitulo-cadastro">Preencha os dados para redefinir</h2>
+			<input name="email" type="email" placeholder="E-mail" required />
+			<input name="cpf" type="text" placeholder="XXX.XXX.XXX-XX" maxlength="14" required />
+			<button class="btn_confirmar" type="submit" onclick="return validar()">Confirmar Usuário</button>
+		</form>
+	</div>
+	<!-- Importando script js para as validações -->
+	<script type="text/javascript" src="js/scriptEsqueceuSenha.js"></script>
+	<!-- Importando Jquery para as mascaras do form -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
