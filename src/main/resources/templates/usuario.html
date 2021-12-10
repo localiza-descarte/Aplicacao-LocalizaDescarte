@@ -80,7 +80,7 @@
 			<div class="card_lojaA" th:each = "loja: ${lojas}">
 				<h2 th:text="${loja.nome}">
 				</h2>
-				<img alt="Image" class="image" th:src="|/logo/${loja.cnpj}|" /><br>
+				<img alt="Logotipo" class="image" th:src="|/logo/${loja.logo}|" /><br>
 				<p class="endereco" th:text="${loja.rua}"></p>
 				<p> <a class="cep" th:text="${loja.cep}"></a></p>
 				<p class="telefone" th:text="${loja.telefone}"></p>
