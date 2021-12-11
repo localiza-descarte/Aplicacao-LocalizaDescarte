@@ -1,5 +1,6 @@
 package br.start.localiza.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,13 +16,12 @@ public class Logo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name = "id_loja_loja")
 	private Loja loja;
 	
 	@Lob
 	private byte[] imagem;
-
 	
 	public Integer getId() {
 		return id;
@@ -46,7 +46,5 @@ public class Logo {
 	public void setImagem(byte[] imagem) {
 		this.imagem = imagem;
 	}
-	
-	
 
 }
