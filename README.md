@@ -2,6 +2,17 @@
 
 ##### A aplicação foi formada no programa Start Latam Powered By Accenture 2021, para apresentação de conclusão do curso.
 
+GitHub: 
+
+- Carlos Felipe: @felipecarvalhobarr
+- Hyago Nascimento: @HyagoNascimento
+- João Vitor: @srwyctor
+- José Nattan: @NattanGama
+- Lucas Myoacr: @myoacr
+- Thiago Silva: @ThiagoDevSantos 
+
+<br>
+
 - ## O que é a Localiza Descarte? 
 <div>
  
