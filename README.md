@@ -1,4 +1,4 @@
-# Localiza Descarte 
+# Localiza Descarte 🇧🇷
 
 ##### A aplicação foi formada no programa Start Latam Powered By Accenture 2021, para apresentação de conclusão do curso.
 
@@ -6,7 +6,13 @@
 <div>
  
  #### Somos um software que tem como objetivo principal dar um destino sustentável para os eletrônicos obsoletos ou quebrados. A aplicação conecta o usuário que possui tal eletrônico a lojas cadastradas em nossa plataforma, assim pode ser efetuado um agendamento com o lojista de preferência do usuário, para realizar um descarte consciente salvando o meio ambiente e recebendo recompensas financeiras por isso. 
-#### <br> O lixo eletrônico é um problema global, e no Brasil o problema é grave, são descartados cerca de 1,5 milhão de tonelada de e-lixo anualmente e somente 3% são reciclados ou vão para lugares apropriados. O descarte irregular de eletrônicos acarreta em problemas ambientais e que se gravam em nossa saúde devido aos componentes químicos presentes na produção dos mesmos como por exemplo o Mercúrio (Hg), Chumbo (Pb), entre outros.<br> 
+ 
+ - ## A problemática: 
+ 
+#### <br> O lixo eletrônico é um problema global, e no Brasil o problema é grave, são descartados cerca de 1,5 milhão de tonelada de e-lixo anualmente e somente 3% são reciclados ou vão para lugares apropriados. O descarte irregular de eletrônicos acarreta em problemas ambientais e que se gravam em nossa saúde devido aos componentes químicos presentes na produção dos mesmos como por exemplo o Mercúrio (Hg), Chumbo (Pb), entre outros. <br>
+ 
+  - ## Rentabilidade: 
+ 
 #### <br> Cerca de 95% de todo e-lixo pode ser reciclado, gerando receita bruta a partir desse material.  Dados recente obtidos pelo G1 mostraram que 400 quilos desse lixo gera uma receita de aproximadamente R$4000,00, um mercado lucrativo para lojistas interessados em reciclar e se cadastrar em nossa plataforma. 
  
 </div>
@@ -44,8 +50,6 @@
 #### Utilizamos o Spring com o Java 11 para criar o banco de dados MySQL, sendo conectado ao front-end por meio da biblioteca Thymeleaf. Com o Hibernate fizemos o mapeamento do Back-end com o Front-end e conectando ao banco de dados.
  
 </div>
-
-
  
  <br>
  
