@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Configurações do usuário</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleConfig-usuario.css">
+<!-- Importando icones do materialize para o menu -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+</head>
+<body>
+
+	<!-- Inicio da div da primeira tela 
+	 de mudança de informações do usuário -->
+	<div class="config-usuario">
+		<!-- Inicio da div do botão de voltar -->
+		<div class="btn-voltar">
+			<a href="/usuario"><i class="material-icons">arrow_back</i></a>
+		</div>
+		<!-- Fim da div do botão de voltar -->
+
+		<form action="#" th:action="@{/atualizar}" th:object="${usuario}" method="post"> 
+			<h1>Configurações do usuário</h1>
+			<br>
+			<!-- Os campos input -->
+			<input type = "hidden" th:field="*{cpf}" >
+			<input type = "hidden" th:field="*{dataNascimento}" >
+			<input type = "hidden" th:field="*{resposta}" >
+			<input type = "hidden" th:field="*{nome}" >
+			<h2 id="perfil-usuario" th:text="${session.usuarioLogado.nome}"></h2>
+			<br>
+			<h2 class="subtitulo-usuario">Preencha as informações desejadas
+				e clique no botão "Salvar Alterações"</h2>
+			<br>
+			 <input type="email" placeholder="E-mail" th:field = "*{email}"/> 
+			 <input type="text" placeholder="Telefone" maxlength="14" th:field = "*{telefone}" /> 
+			 <input type="password" placeholder="Digite sua senha ou nova senha" th:field = "*{senha}"/> 
+		     <input type="password" placeholder="Confirmar Senha" />
+			<button class="btn_salvar" type = "submit">Salvar Alterações</button>
+		</form>
+	</div>
+	<!-- Fim da div -->
+
+</body>
+</html>

@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -32,9 +31,6 @@ public class Loja {
 	@Column (nullable = false, name =  "senha_loja")
 	@NotBlank (message = "o  campo n�o pode esta  vazio")
 	private String senha;
-	
-	@Lob
-	private byte[] logo;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false, name = "produto_loja")
@@ -65,14 +61,6 @@ public class Loja {
 	private String cep;
 	
 	
-
-	public byte[] getLogo() {
-		return logo;
-	}
-
-	public void setLogo(byte[] logo) {
-		this.logo = logo;
-	}
 
 	public String getEstado() {
 		return estado;

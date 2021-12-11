@@ -1,0 +1,205 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+	font-family: 'roboto';
+}
+/* Menu principal do site */
+.logotipo {
+	width: 75px;
+	height: 60;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.texto-pag {
+	margin-left: 10px;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #228B22;
+	font-size: 30px;
+	position: absolute;
+	top: 1%
+}
+
+.inicial {
+	position: static;
+	background-color: white;
+	z-index: 3;
+}
+
+.botao {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+	margin-left: 2px;
+}
+
+.botao:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+.fa-cog, .fa-sign-out {
+	display: inline;
+	margin-left: 15px;
+}
+
+.botao-2 {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.botao-2:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+.material-icons {
+	color: rgb(34, 139, 34);
+}
+
+/* Fim das configurações do menu principal */
+
+/* Criando espaço em branco, definindo se um elemento deve ser 
+movido abaixo (limpo) elementos flutuantes que o precedem. 
+A propriedade se aplica a elementos flutuantes e não flutuantes. */
+.espaco-em-branco {
+	clear: both;
+}
+
+/* Controle das 3 caixas superiores do painel */
+.sessao_cards {
+	text-align: center;
+	margin-top: 10px;
+	padding: 5px;
+	justify-content: center;
+	align-items: center;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+/* Configuração geral de exibição do container, para os cards */
+.cards {
+	display: flex;
+	justify-content: center;
+}
+
+/* Configuração da tag h2 de todos os cards */
+.cards h2 {
+	color: white;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Configuração geral para todos os card das lojas, 
+exibindo a transparência e os efeitos */
+.card_usuario, .card_loja, .card_agendamento {
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	float: left;
+	position: relative;
+	margin: 5px;
+	width: 400px;
+	height: 300px;
+}
+
+/* Configuração da tag p dentro dos cards */
+.qnt_usuarios, .qnt_lojas, .qnt_agendamentos {
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+/* Icones das caixas superiores  */
+#usuario-inscritos {
+	color: white;
+	font-size: 50px !important;
+	margin-top: 20px !important;
+	margin-bottom: 10px;
+}
+
+#lojas-inscritas {
+	color: white;
+	font-size: 50px !important;
+	margin-top: 20px !important;
+	margin-bottom: 10px;
+}
+
+#agnd-concluida {
+	color: white;
+	font-size: 50px !important;
+	margin-top: 20px !important;
+	margin-bottom: 10px;
+}
+/* Fim do controle das caixas superiores do painel */
+
+/* Inicio do controle dos 2 blocos do painel.
+ Posição, tamanho do bloco */
+.bloco-lojas {
+	width: 50%;
+	align-content: center;
+}
+
+.texto-bloco {
+	padding: 20px;
+}
+
+.texto-bloco p {
+	margin: 0px;
+	font-size: 30px;
+	font-style: italic;
+	color: white;
+	display: flex;
+}
+
+.texto-bloco .agenda {
+	text-align: center;
+	font-size: 30px;
+}
+
+.btn-mais {
+	float: right;
+	display: flex;
+	background-color: white;
+	border-radius: 10px;
+	color: #228B22;
+	padding: 5px 10px;
+	font-size: 15px;
+}
+
+.btn-mais:hover {
+	background-color:#228B22;
+	color: white;
+}
+
+.container-1 {
+	margin-left: 25%;
+	background: rgba(43, 38, 38, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 600px;
+	height: 400px;
+	margin-bottom: 20px;
+}
+/* Fim do controle dos 2 blocos do painel */

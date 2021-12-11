@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<title>Login Lojista</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando fontes e icones -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleLogin-lojista.css">
+<!-- Importando Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>	
+</head>
+
+<body>
+	<div class="entrar-adm">
+	<div class="logo-marca">
+			<a href="/index"><img class="logo-localiza"
+				src="img/logomarca/localiza-branca.png"
+				alt="Logomarca foto"></a>
+		</div>
+		<form th:action= "@{/efetuarLoginLoja}" th:object="${loja}" method="post" >
+			<h1>Login<br>Lojista</h1>
+			<input  type="text" name="cnpj" id="cnpj" placeholder="CNPJ" maxlength="18" onkeyup="mascara_cnpj()" />
+			 <input type="password" th:field="*{senha}" placeholder="Senha" />
+			<a class="btn_confirmar" href="/lojista">Entrar</a>
+		</form>
+	</div>
+	<!-- Importando script js para realizar as validações da tela de cadastro -->
+	<script type="text/javascript" src="js/scriptCadastroloja.js"></script>
+	<!-- Importando Jquery para as mascaras do form -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

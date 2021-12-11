@@ -1,0 +1,85 @@
+/* Importando fonte, roboto do google fonts */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+body {
+	background-image: url("../img/fundo-verde.jpg");
+	font-family: 'roboto';
+}
+
+#agendamento {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 20px;
+	width: 600px;
+	height: 550px;
+	background: rgba(43, 38, 38, 0.3);
+	margin-top: -2%;
+	margin-left: auto;
+	margin-right: auto;
+}
+ 
+h1 {
+	font-size: 40px;
+	font-style: italic;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.nome-loja {
+	font-size: 20px;
+	font-style: italic;
+	text-align: center;
+	color: white;
+	text-align: center;
+}
+
+#agendamento form {
+	margin: 5px;
+	text-align: center;
+}
+
+.opcao {
+	background-color: #eee;
+	border: none;
+	padding: 12px 1px;
+	margin: 8px 0;
+	width: 90%;
+}
+
+#botao {
+	margin-top: 5px;
+	padding: 10px;
+	background-color: rgb(34, 139, 34); 
+	color: white;
+	border: solid rgb(34, 139, 34) 1px;
+	border-radius: 6px;
+}
+
+#botao:hover {
+	background-color: white;
+	color: rgb(34, 139, 34);
+	transition: .4s;
+}
+
+.marca, .ano-modelo {
+	background-color: #eee;
+	border: none;
+	padding: 12px 1px;
+	margin: 8px 0;
+	width: 90%;
+}
+
+/* Configurações da exibição do botão voltar tela */
+.seta_voltar i {
+	border-radius: 50%;
+	background: white;
+	color: #228b22;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleLogin.css">
+<!-- Importando Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>	
+</head>
+
+<body>
+	<div>
+		<p>
+			<a id="btn_inicial" href="/index">Início</a>
+		</p>
+	</div>
+	<div class="container" id="container">
+		<div class="tela cadastro">
+			<form name="formCadastro" class="formulario-cadastro" th:action="@{/salvarUsuario}" th:object="${usuario}" method="post">
+				<h1>Crie sua conta</h1>
+				<span>Preencha os dados para registrar-se</span> 
+				<input name="nome" type="text" placeholder="Nome Completo" th:field="*{nome}" required />
+				<input name="nascimento" type="date"placeholder="Data de nascimento" th:field="*{dataNascimento}" required /> 
+				<input name="cpf" type="text" placeholder="XXX.XXX.XXX-XX" maxlength="14" th:field="*{cpf}" required /> 
+				<input name="telefone" type="text" placeholder="(00)0 0000-0000" maxlength="15" th:field="*{telefone}" required /> 
+				<input name="email" type="email" placeholder="E-mail" th:field="*{email}" /> 
+				<input name="senha" type="password" placeholder="Senha" th:field="*{senha}" />
+				<input name="rep_senha" type="password" placeholder="Confirmar Senha" required />
+				<input name="resposta" type="text" placeholder="Qual é o nome da sua mãe?" th:field="*{resposta}" required />
+				<input type="checkbox" name="termos" required /> 
+				<label>Você aceita os<a class="lgpd" href="/lgpd" target="black"> termos de uso de acordo com LGPD?</a></label> 
+				<br/>
+				<button type="submit" href="/usuario" onclick="return validar()">Registra-se</button>
+			</form>
+		</div>
+		<div class="tela entrar">
+			<form name="formLogin" th:action= "@{/efetuarLogin}" th:object="${usuario}" method="post" >
+				<h1>Entrar</h1>
+				<span>Entre com a sua conta</span> 
+				<input name="cpf" id="cpf" type="text" th:field="*{cpf}" placeholder="XXX.XXX.XXX-XX" maxlength="14" size="15" onkeyup="mascara_cpf()" /> 
+				<input type="password" th:field="*{senha}" placeholder="Senha" /> 
+				<a class="link-esqueceu-senha" href="/esqueceu-senha">Esqueceu sua senha?</a>
+				<button type="submit" onclick="return validar()">Entrar</button>
+				<a class="btn_login" href="/login-lojista" >Entrar como lojista</a>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Já possui uma conta?</h1>
+					<p>Para realizar o seu login, clique no botão abaixo</p>
+					<button class="ghost" id="signIn">Entre-já</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Seja bem-vindo a Localiza Descarte</h1>
+					<p>Preencha os campos com os seus dados para registrar-se na
+						nossa plataforma</p>
+					<button class="ghost" id="signUp" th:action="@{/salvarUsuario}">Registrar-se</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Importando script js para a transição das div de login, cadastro e as validações -->
+	<script type="text/javascript" src="js/scriptlogin.js"></script>
+	<!-- Importando Jquery para as mascaras do form -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

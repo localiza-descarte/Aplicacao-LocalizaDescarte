@@ -1,0 +1,284 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "roboto";
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-family: "roboto";
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	font-family: "roboto";
+	text-align: center;
+}
+/* Configurações do botão de tela inicial localizado no canto superior esquerdo 
+da página */
+#btn_inicial {
+	border: #228b22 solid 2px;
+	border-radius: 6px;
+	padding: 12px;
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+	z-index: 10000;
+	left: 4px;
+	position: absolute;
+	font-weight: bold;
+}
+
+#btn_inicial:hover {
+	background-color: white;
+	color: rgb(34, 139, 34);
+}
+
+#btn_inicial a {
+	color: white;
+}
+/* Fim das configurações do botão de tela inicial localizado no canto superior esquerdo 
+da página */
+p {
+	font-family: "roboto";
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+/* Início das configurações gerais de todos os botões da página  */
+button {
+	cursor: pointer;
+	border-radius: 20px;
+	border: 1px solid #228b22;
+	background-color: #228b22;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:hover {
+	background-color: #fff;
+	color: #228b22;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: #fff;
+	color: #228b22;
+	border-color: #FFFFFF;
+}
+
+button.ghost:hover {
+	background-color: transparent;
+	color: #fff;
+	border-color: #FFFFFF;
+}
+
+.btn_login {
+	cursor: pointer;
+	color: black;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 30px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.btn_login:hover {
+	color: #228b22;
+}
+/* Fim das configurações gerais de todos os botões da página  */
+
+/* Configuração de tela */
+.tela {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+/* Inicio das configurações de exibição da tela de entrar (login) */
+.entrar {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+/* Fim das configurações de exibição da tela de entrar (login)  */
+
+/* Inicio das configurações de exibição da tela de cadastro  */
+.cadastro {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+/* Fim das configurações de exibição da tela de cadastro  */
+.link-esqueceu-senha:hover {
+	color: #228b22;
+}
+
+/* Início das configurações gerais de todos os botões da página  */
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 60px;
+	height: 100%;
+	text-align: center;
+}
+
+input, select {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 3px 12px;
+	width: 100%;
+}
+
+.lgpd {
+	color: #228b22;
+}
+
+.lgpd:hover {
+	text-decoration: underline;
+}
+/* Fim das configurações gerais de todos os botões da página  */
+
+/* Inicio das configurações de transição */
+.container.right-panel-active .entrar {
+	transform: translateX(100%);
+}
+
+.container.right-panel-active .cadastro {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+/* Fim das configurações de transição */
+@
+keyframes show { 0%, 49.99% {
+	opacity: 0;
+	z-index: 1;
+}
+
+50%,
+100%
+{
+opacity
+:
+ 
+1;
+z-index
+:
+ 
+5;
+}
+}
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: url("../img/fundo-verde.jpg") fixed bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}

@@ -1,0 +1,179 @@
+/* Configurações globais da página */
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+	margin: auto;
+}
+
+body {
+	font-family: "Roboto";
+	background: url("../img/pagLgpd/fundo-lgpd.jpg") fixed bottom;
+	background-size: cover;
+}
+/* Fim das configurações globais */
+
+/* Menu principal do site */
+#logo {
+	width: 75px;
+	height: 50;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.inicial {
+	position: fixed;
+	background-color: white;
+	z-index: 3;
+}
+
+.bottom {
+	color: rgb(34, 139, 34);
+}
+
+.login {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	transition: all .3s;
+	font-size: 18px;
+}
+
+.login:hover {
+	color: white;
+	background-color: rgb(34, 139, 34);
+	border: rgb(34, 139, 34) solid 3px;
+}
+
+#login_2 {
+	color: white;
+	background-color: rgb(34, 139, 34);
+}
+
+#login_2:hover {
+	color: rgb(34, 139, 34);
+	background-color: white;
+}
+
+.material-icons {
+	color: rgb(34, 139, 34);
+}
+
+/* Definições div e da logomarca da localiza*/
+.logo-marca {
+	display: block;
+	text-align: center;
+}
+
+.logo-localiza {
+	max-width: 200px;
+	max-height: 150px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin-top: 80px;
+}
+
+/* Definições da sessão lgpd */
+.lgpd{
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+}
+
+.titulo_sessao {
+	font-size: 70px;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 10px;
+	text-align: center;
+	color: white;
+}
+
+.lgpd p {
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	font-style: oblique;
+	text-align: center;
+	width: 80%;
+	padding-bottom: 50px;
+}
+/* Fim da sessão sessão lgpd */
+
+/* Inicio do rodapé  
+configurações */
+.rodape {
+	background-color: #26272b;
+	padding: 45px 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	text-align: center;
+}
+/* Definição da linha divisoria do rodapé */
+.divisoria-rodape {
+	opacity: 0.5;
+	padding-left: 25%;
+	padding-right: 25%;
+	width: 80%;
+	color: white;
+	width: 80%;
+}
+/* Definição de cor do link da StartLatam e Accenture */
+.rodape a {
+	color: #A100FF;
+}
+/* Estilização de hover do link da StartLatam e Accenture */
+.rodape a:hover {
+	text-decoration: overline;
+}
+
+/* Configuração da classe do copyright  */
+.copyright {
+	padding-top: 20px;
+	color: white;
+	font-style: italic;
+	font-size: 18px;
+}
+
+/* Alinhamento dos icones sociais à direita da página */
+.rodape-container .social-icons {
+	padding-top: 20px;
+	align-content: center;
+}
+
+/* Configuração da borda redonda envolta dos icones sociais */
+.rodape-container .social-icons a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 6px;
+	margin-right: 0;
+	border-radius: 100%;
+	background-color: #33353d;
+}
+/* Posição lado a lado dos icones sociais  */
+.social-icons li {
+	display: inline-block;
+}
+/* Controle dos icones sociais
+tamanho, posição, duração da transição do efeito do hover */
+.social-icons a {
+	font-size: 20px;
+	display: inline-block;
+	line-height: 44px;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	border-radius: 100%;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/* Definição da cor do hover dos icones sociais */
+.social-icons a:hover {
+	background-color: #228B22;
+}
+/* Fim do rodapé */

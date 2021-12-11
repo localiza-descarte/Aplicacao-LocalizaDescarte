@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<!-- Definição base de escala no navegador -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico"
+	type="image/x-icon">
+<!-- Importando icones do materialize -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleAgendamento.css">
+</head>
+<body>
+	<div class="seta_voltar">
+		<a href="/usuario"><i class="material-icons">arrow_back</i></a>
+	</div>
+	<div id="agendamento">
+		<h1>Agendamento</h1>
+		<h2 class="nome-loja" th:text="${loja.nome}">Nome da Loja</h2>
+		<form name="cadastro" th:action="@{/salvarAgendamento}"  method="post">
+			<br> <input class="opcao" type="text" placeholder="Nome" name="nome" th:value="${session.usuarioLogado.nome}">
+			<input class="opcao" type="text" placeholder="CPF" size="14" name="cpf"  th:value="${session.usuarioLogado.cpf}">
+			<br> 
+			<select class="opcao" name="produto" id="produto" >
+				<option th:value="Tv">TV</option>
+				<option value="Tablet">Tablet</option>
+				<option value="Notebook">Notebook</option>
+				<option value="Celular">Celular</option>
+			</select>
+			<br>
+			<input class="marca" type="text" placeholder="Marca"> <br>
+			<select class="opcao" name="horaDoAgendamento" id="horario" >
+				<option value="16/12/21 15:00">16/12/21 15:00</option>
+				<option value="17/12/21 16:00">17/12/21 16:00</option>
+				<option value="18/12/21 17:00">18/12/21 17:00</option>
+				<option value="19/12/21 14:00">19/12/21 14:00</option>
+				<option value="20/12/21 13:00">20/12/21 13:00</option>
+			</select>
+			 <br> 
+			 <input type="date" name="dataDoAgendamento">
+			<input id="botao" type="submit" name="enviar" value="Enviar" href= "/usuario">
+		</form>
+	</div>
+</body>
+</html>

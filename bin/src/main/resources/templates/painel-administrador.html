@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Administrador</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/logomarca/favicon.ico">
+<!-- Importando CSS -->
+<link rel="stylesheet" href="css/styleAdministrador.css">
+<!-- Importando Icone para o menu  -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link type="text/css" rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+<!-- CDN Link -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Importando Jquery para criação do menu -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script>
+		$(function() {
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<!-- Inicio do menu inicial da página  -->
+	<nav class="inicial">
+		<div class="nav-wrapper">
+		
+		
+			<a href="/index"><img class="logotipo"
+				src="img/logomarca/logo.png"
+				alt="Logotipo Localiza Descarte"></a><a href="#"
+				data-activates="menu-mobile" class="button-collapse"> <i
+				class="material-icons">menu</i>
+			</a> <a class="texto-pag">Painel Administrador</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="alterar" href="/dados-administrador">Alterar
+						dados do administrador</a></li>
+				<li><a class="cadastro" href = "/cadastroLoja"> Cadastrar
+						Loja</a></li>
+				<li><a class="relatorios" >Relatórios</a></li>
+				<li><a class="botao" href="/login-administrador">Sair<i
+						class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a id="alterar_2" href="/dados-administrador">Alterar
+						dados do perfil</a></li>
+				<li><a id="cadastro_2" href = "/cadastroLoja">Cadastrar
+						Loja</a></li>
+				<li><a id="relatorios_2" href="/adm-cadastro-loja">Relatórios</a></li>
+				<li><a class="botao_2" href="/login-administrador">Sair<i
+						class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Fim do menu inicial da página  -->
+
+	<!-- Paineis localizados na parte superior da página -->
+	<div id="sessao_cards" class="sessao_cards">
+		<div class="cards">
+			<div class="card_usuario">
+				<h2>
+					Usuários<br>Cadastradas
+				</h2>
+				<p class="qnt_usuarios">Número total</p>
+				<i id="usuario-inscritos" class="fa fa-users box-icon"></i>
+			</div>
+
+			<div class="card_loja">
+				<h2>
+					Lojas<br>Cadastradas
+				</h2>
+				<p class="qnt_lojas">Número total</p>
+				<i id="lojas-inscritas" class="fa fa-shopping-bag box-icon"></i>
+			</div>
+
+			<div class="card_agendamento">
+				<h2>
+					Agendamentos<br>Realizados
+				</h2>
+				<p class="qnt_agendamentos">Número total</p>
+				<i id="agnd-concluida" class="fa fa-calendar" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div class="espaco-em-branco"></div>
+	<br />
+	<!-- Div responsavel pela caixa retangular localizada na esquerda da página -->
+	<div class="bloco-lojas">
+		<div class="container-1">
+			<div class="texto-bloco">
+				<p>Lojas cadastradas na plataforma</p>
+				<br />
+				<table class="lojas_plataforma">
+					<tr>
+						<th>Empresa</th>
+						<th>Bairro</th>
+						<th>Editar</th>
+						<th>Remover</th>
+					</tr>
+					<tr>
+						<td>Casas Montanhosas</td>
+						<td>Torreão</td>
+						<td><a href="/config-adm-loja"><i id="icon_editar"
+								class="fa fa-pencil" aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Nordeste Eletronico</td>
+						<td>Torreão</td>
+						<td><a href="/config-adm-loja"><i id="icon_editar"
+								class="fa fa-pencil" aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Start Produtos</td>
+						<td>Iputinga</td>
+						<td><a href="config-adm-loja.html"><i id="icon_editar"
+								class="fa fa-pencil" aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Lojas Net</td>
+						<td>Boa Viagem</td>
+						<td><a href="/config-adm-loja"><i id="icon_editar"
+								class="fa fa-pencil" aria-hidden="true"></i></a></td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+				</table>
+				<a class="btn-mais" href="/mais-loja">Veja Mais</a>
+			</div>
+		</div>
+	</div>
+	<!-- Div responsavel pela caixa retangular localizada na esquerda da página -->
+	<div class="bloco-usuarios">
+		<div class="container-2">
+			<div class="texto-bloco">
+				<p>Usuários cadastrados na plataforma</p>
+				<br />
+				<table class="usuarios_plataforma">
+					<tr>
+						<th>Nome Completo</th>
+						<th>E-mail</th>
+						<th>Remover</th>
+					</tr>
+					<tr>
+						<td>João Carlos</td>
+						<td>johncarl@start2021.com</td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Estér Silva</td>
+						<td>estersilva@start2021.com</td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Eli Ribeiro</td>
+						<td>elirdeuséfiel@start2021.com</td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+					<tr>
+						<td>Felipe Luiz</td>
+						<td>luizfelipe@start2021.com</td>
+						<td><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true"></i></td>
+					</tr>
+				</table>
+				<a class="btn-mais" th:href = "@{/usuarios}">Veja Mais</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
