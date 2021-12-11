@@ -77,7 +77,7 @@
 	<!-- Inicio da sessão de exibição das lojas -->
 	<div id="sessao_loja" class="sessao_loja">
 		<div class="container">
-			<div class="card_lojaA" th:each = "loja: ${lojas}">
+			<div class="card_lojas" th:each = "loja: ${lojas}">
 				<h2 th:text="${loja.nome}">
 				</h2>
 				<img alt="Logotipo" class="image" th:src="|/logo/${loja.cnpj}|" /><br>

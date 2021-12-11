@@ -170,7 +170,7 @@ Configuração do tamanho da div da sessão / definição da imagem de fundo
 }
 
 /* Configuração geral para todos os card das lojas, exibindo a transparência e os efeitos */
-.card_lojaA, .card_lojaB, .card_lojaC {
+.card_lojas {
 	margin: 5px;
 	width: 400px;
 	height: 600px;
