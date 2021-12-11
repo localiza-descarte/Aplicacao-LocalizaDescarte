@@ -65,7 +65,7 @@ GitHub:
  <br>
  
  ## Referências:
- #### Material de base da pesquisa
+ #### Material de base da pesquisa:
  
  - https://revistagalileu.globo.com/Ciencia/Meio-Ambiente/noticia/2018/05/quase-todo-lixo-eletronico-do-brasil-e-descartado-de-maneira-errada.html
  - https://economia.estadao.com.br/noticias/geral,brasil-e-o-pais-que-mais-produz-lixo-eletronico-na-america-latina,70003769064#:~:text=A%20estimativa%20%C3%A9%20que%20o,ou%20descartado%20de%20maneira%20adequada.&text=Cabos%2C%20controles%20remotos%20e%20outros,urnas%20espec%C3%ADficas%20para%20esse%20descarte.
