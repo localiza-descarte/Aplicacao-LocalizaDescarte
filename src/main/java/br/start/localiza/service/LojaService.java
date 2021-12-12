@@ -39,4 +39,9 @@ public class LojaService {
 	public Loja loginDaLoja(String cnpj, String senha) {
 		return lojaDAO.loginLoja(cnpj, senha);
 	}
+	
+	// Contador de Loja
+	public Loja contadorLoja(String cnpj) {
+		return lojaDAO.lojasCadastradas(cnpj);
+	}
 }

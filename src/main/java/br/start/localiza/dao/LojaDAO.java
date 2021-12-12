@@ -17,5 +17,5 @@ public interface LojaDAO extends JpaRepository<Loja, String> {
 	List<Loja> buscarPorNome(String nome, String cnpj);
 	
 	@Query(value = "select count(cnpj) from loja", nativeQuery = true)
-	public Loja LojasCadastrados (String cnpj);
+	public Loja lojasCadastradas(String cnpj);
 }

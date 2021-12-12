@@ -12,7 +12,7 @@ public class LogoService {
 	@Autowired
 	private LogoDAO logoDAO;
 	
-	//mostra logo da loja
+	// Mostra logo da loja
 	public Logo getLogo(Integer idLoja) {
 		return logoDAO.buscarPorLoja(idLoja);
 	}

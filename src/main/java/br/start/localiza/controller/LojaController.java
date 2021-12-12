@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,15 +54,20 @@ public class LojaController {
 	
 	@ModelAttribute("produtos")
 	public Produto[] getListaProd() {
-		return Produto.values();
-		
+		return Produto.values();	
 	}
 	
-	@GetMapping("/logo/{loja.cnpj}")
+	@GetMapping("/logo/{loja.idLoja}")
 	@ResponseBody
 	public byte[] exibirImagem(@PathVariable("idLoja") Integer idLoja) {
 		Logo logo = logoService.getLogo(idLoja);
 		return logo.getImagem();
+	}
+	
+
+	@RequestMapping("/lojas")
+	private String contandoLojas()	{
+		 this.lojaService.contadorLoja(cnpj);
 	}
 	
 }

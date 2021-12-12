@@ -1,13 +1,10 @@
 package br.start.localiza.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -63,10 +60,6 @@ public class Loja {
 	@NotBlank (message = "o  campo n�o pode esta  vazio")
 	private String cep;
 	
-	
-	@OneToOne(cascade=CascadeType.PERSIST)
-	@JoinColumn(name = "logoLoja")
-	private Logo logo;
 	
 
 	public String getEstado() {
@@ -165,12 +158,5 @@ public class Loja {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-	
-
-	
-	
-	
-	
 
 }
