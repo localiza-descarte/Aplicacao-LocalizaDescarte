@@ -57,9 +57,9 @@ public class LojaController {
 		
 	}
 	
-	@GetMapping("/logo/{idLoja}")
+	@GetMapping("/logo/{loja.cnpj}")
 	@ResponseBody
-	public byte[] exibirImagen(@PathVariable("idLoja") Integer idLoja) {
+	public byte[] exibirImagem(@PathVariable("idLoja") Integer idLoja) {
 		Logo logo = logoService.getLogo(idLoja);
 		return logo.getImagem();
 	}
