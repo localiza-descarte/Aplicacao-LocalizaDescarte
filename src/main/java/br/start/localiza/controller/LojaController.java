@@ -1,13 +1,14 @@
 package br.start.localiza.controller;
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +17,7 @@ import br.start.localiza.dao.Util;
 import br.start.localiza.model.Logo;
 import br.start.localiza.model.Loja;
 import br.start.localiza.model.Produto;
+import br.start.localiza.model.Usuario;
 import br.start.localiza.service.LogoService;
 import br.start.localiza.service.LojaService;
 
@@ -64,10 +66,22 @@ public class LojaController {
 		return logo.getImagem();
 	}
 	
-
-	@RequestMapping("/lojas")
-	private String contandoLojas()	{
-		 this.lojaService.contadorLoja(cnpj);
+	@GetMapping ("/lojas")
+    public String mostraLojas(Model model) {
+		List<Loja> loja = lojaService.mostraLojas();
+		 model.addAttribute("lojas", loja);
+		 return "mais-loja";
+    }
+	
+	@GetMapping("/deletar")
+	private String deletarLoja(@PathVariable("idLoja") String idLoja, Model model) {
+	     lojaService.excluirLoja(idLoja);
+	     return "index";
 	}
 	
+	@GetMapping ("/editarLoja")
+	public String editarLoja( String cnpj, Model model) {
+		model.addAttribute("lojas", lojaService.lojaCnpj(cnpj));
+		return "config-loja";
+	}
 }

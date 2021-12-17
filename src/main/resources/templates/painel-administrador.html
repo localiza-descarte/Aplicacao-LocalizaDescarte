@@ -91,94 +91,21 @@
 	</div>
 	<div class="espaco-em-branco"></div>
 	<br />
-	<!-- Div responsavel pela caixa retangular localizada na esquerda da página -->
-	<div class="bloco-lojas">
+	<!-- Div responsavel pela caixa da loja -->
+	<div class="bloco-informacoes">
 		<div class="container-1">
 			<div class="texto-bloco">
-				<p>Lojas cadastradas na plataforma</p>
+				<p>Lista de informações: Lojas</p>
 				<br />
-				<table class="lojas_plataforma">
-					<tr>
-						<th>Empresa</th>
-						<th>Bairro</th>
-						<th>Editar</th>
-						<th>Remover</th>
-					</tr>
-					<tr>
-						<td>Casas Montanhosas</td>
-						<td>Torreão</td>
-						<td><a href="/config-adm-loja"><i id="icon_editar"
-								class="fa fa-pencil" aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Nordeste Eletronico</td>
-						<td>Torreão</td>
-						<td><a href="/config-adm-loja"><i id="icon_editar"
-								class="fa fa-pencil" aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Start Produtos</td>
-						<td>Iputinga</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar"
-								class="fa fa-pencil" aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Lojas Net</td>
-						<td>Boa Viagem</td>
-						<td><a href="/config-adm-loja"><i id="icon_editar"
-								class="fa fa-pencil" aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-				</table>
-				<a class="btn-mais" href="/mais-loja">Veja Mais</a>
+				<a class="btn-mais" th:href = "@{/lojas}">Lista</a>
 			</div>
 		</div>
-	</div>
-	<!-- Div responsavel pela caixa retangular localizada na esquerda da página -->
-	<div class="bloco-usuarios">
+	<!-- Div responsavel pela caixa do usuário -->
 		<div class="container-2">
 			<div class="texto-bloco">
-				<p>Usuários cadastrados na plataforma</p>
+				<p>Lista de informações: Usuários</p>
 				<br />
-				<table class="usuarios_plataforma">
-					<tr>
-						<th>Nome Completo</th>
-						<th>E-mail</th>
-						<th>Remover</th>
-					</tr>
-					<tr>
-						<td>João Carlos</td>
-						<td>johncarl@start2021.com</td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Estér Silva</td>
-						<td>estersilva@start2021.com</td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Eli Ribeiro</td>
-						<td>elirdeuséfiel@start2021.com</td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Felipe Luiz</td>
-						<td>luizfelipe@start2021.com</td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-				</table>
-				<a class="btn-mais" th:href = "@{/usuarios}">Veja Mais</a>
+				<a class="btn-mais" th:href = "@{/usuarios}">Lista</a>
 			</div>
 		</div>
 	</div>

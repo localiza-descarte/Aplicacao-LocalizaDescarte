@@ -89,10 +89,9 @@ public class UsuarioController {
     }
 	
 	
-	@GetMapping ("/editar")
+	@GetMapping ("/editarUsuario")
 	public String editarUsuario( String cpf,Model model) {
 		model.addAttribute("usuario", usuarioService.usuarioCpf(cpf));
-		
 		return "configuracao-usuario";
 	}
 

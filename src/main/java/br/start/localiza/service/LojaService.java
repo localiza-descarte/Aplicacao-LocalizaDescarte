@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.start.localiza.dao.LojaDAO;
 import br.start.localiza.model.Loja;
+import br.start.localiza.model.Usuario;
 
 @Service
 public class LojaService {
@@ -16,7 +17,7 @@ public class LojaService {
 	
 	// Lista todas as lojas
 	public List<Loja> mostraLojas() {
-		return this.lojaDAO.findAll();
+		return (List<Loja>) lojaDAO.findAll();
 	}
 	
 	// Salvar o Lojista
@@ -40,8 +41,5 @@ public class LojaService {
 		return lojaDAO.loginLoja(cnpj, senha);
 	}
 	
-	// Contador de Loja
-	public Loja contadorLoja(String cnpj) {
-		return lojaDAO.lojasCadastradas(cnpj);
-	}
 }
+

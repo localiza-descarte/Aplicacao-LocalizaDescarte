@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org" >
 
 <head>
 <meta charset="UTF-8">
@@ -56,69 +56,13 @@
 						<th>Editar</th>
 						<th>Remover</th>
 					</tr>
-					<tr>
-						<td>Casas Montanhosas</td>
-						<td>Torreão</td>
+					<tr th:each = "loja : ${lojas}">
+					  	<th th:text="${loja.nome}"></th>
+						<td th:text = "${loja.bairro}"></td>
 						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
 							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Nordeste Eletronico</td>
-						<td>Torreão</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Start Produtos</td>
-						<td>Iputinga</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Lojas Net</td>
-						<td>Boa Viagem</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Hora da Compra</td>
-						<td>Encruzilhada</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Imperio Lab</td>
-						<td>Torre</td>
-						<td><a href="configuracao-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Lojas Ligados</td>
-						<td>Boa Viagem</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
-					</tr>
-					<tr>
-						<td>Smart Device</td>
-						<td>Santana</td>
-						<td><a href="config-adm-loja.html"><i id="icon_editar" class="fa fa-pencil"
-							aria-hidden="true"></i></a></td>
-						<td><i id="icon_remover" class="fa fa-trash"
-							aria-hidden="true"></i></td>
+						<td><a th:href="|/deletarLoja/${loja.cnpj}|"><i id="icon_remover" class="fa fa-trash"
+							aria-hidden="true" ></i></a></td>
 					</tr>
 				</table>
 			</div>

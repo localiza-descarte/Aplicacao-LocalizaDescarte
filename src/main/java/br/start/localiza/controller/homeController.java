@@ -62,7 +62,7 @@ public class homeController {
 	}
 	
 	
-	@GetMapping ("/config-adm-loja")
+	@GetMapping ("/config-loja")
 	public String getConfigAdmLoja() {
 		return "config-adm-loja";
 	}

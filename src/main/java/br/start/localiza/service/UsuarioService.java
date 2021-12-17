@@ -41,12 +41,12 @@ public class UsuarioService {
 	}
 	
 	// Recuperar a Senha
-		public Usuario RecuperacaoSenha(String email, String cpf) {
-			return usuarioDAO.EsqueceuSenha(email, cpf);
-		}
+	public Usuario RecuperacaoSenha(String email, String cpf) {
+		return usuarioDAO.EsqueceuSenha(email, cpf);
+	}
 		
-		// Resposta para a Senha
-				public Usuario ConfirmacaoResposta(String resposta) {
-					return usuarioDAO.RespostaChave(resposta);
-				}
+	// Resposta para a Senha
+	public Usuario ConfirmacaoResposta(String resposta) {
+		return usuarioDAO.RespostaChave(resposta);
+	}
 }

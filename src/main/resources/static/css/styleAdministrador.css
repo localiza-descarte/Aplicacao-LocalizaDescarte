@@ -173,10 +173,11 @@ exibindo a transparência e os efeitos */
 }
 
 .texto-bloco p {
-	margin: 0px;
-	font-size: 30px;
-	font-style: italic;
 	color: white;
+	font-size: 22px;
+	font-weight: 700;
+	font-style: italic;
+	text-transform: uppercase;
 	display: flex;
 }
 
@@ -185,39 +186,44 @@ exibindo a transparência e os efeitos */
 	font-size: 30px;
 }
 
+.bloco-informacoes {
+	display: flex;
+	justify-content: center;
+}
+
 /* Controle da div loja */
 .container-1 {
-	margin-left: 5%;
 	background: rgba(43, 38, 38, 0.3);
 	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	width: 600px;
-	height: 400px;
+	width: 350px;
+	height: 200px;
+	text-align: center;
+	margin: 0 1rem 1rem 0;
 }
 
 /* Fim do controle do container-1 responsavel pelo controle da janela de loja */
 .container-2 {
-	margin-right: 5%;
 	background: rgba(43, 38, 38, 0.3);
 	box-shadow: 0 8px 32px 0 rgba(70, 70, 70, 0.37);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	width: 600px;
-	height: 400px;
+	width: 350px;
+	height: 200px;
+	text-align: center;
 }
 
 .btn-mais {
-	float: right;
-	display: flex;
+	justify-content: center;
 	background-color: white;
 	border-radius: 10px;
 	color: #228B22;
-	padding: 5px 10px;
+	padding: 15px 30px;
 	font-size: 15px;
 }
 
